@@ -2,36 +2,40 @@ package org.example;
 
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Problem1 {
+
     static Scanner s=new Scanner(System.in);
+    public int twoSum(int a,int b,int input) {
 
-    public static void main(String[] args) {
-        int value1=s.nextInt();
-        int value2=s.nextInt();
 
-        int input=s.nextInt();
 
-        switch(input){
 
-            case 1 : {System.out.println("Addition:"+ (value1+value2));
-                         break;
+      switch (input) {
+
+            case 1: {
+               return a+b;
+
             }
-            case 2 : {System.out.println("Substraction:"+(value1 - value2));
-                break;
+            case 2: {
+               return a-b;
+
             }
-            case 3 : {System.out.println("Multiplication:"+ (value1*value2));
-                break;
+            case 3: {
+                return a*b;
+
             }
-            case 4 : {System.out.println("Division:"+ (value1/value2));
-                break;
+            case 4: {
+                if(b==0){
+                    System.out.println("Invalid number");
+                    return 0;
+                }
+                return a/b;
+
             }
+          default: System.out.println("Inavalid number");
+          return 0;
         }
-
 
     }
 
-
 }
-
